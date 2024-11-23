@@ -14,12 +14,9 @@ export default function Home() {
           priority
         />
         <ol>
-          <li>
-            Welcome to Rupert's website!
-          </li>
-          <li>We'll be getting this up and running in no time.</li>
+          <li>Welcome to Rupert&apos;s website!</li>
+          <li>We&apos;ll be getting this up and running in no time.</li>
         </ol>
-
       </main>
     </div>
   );
