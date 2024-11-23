@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <div class="ctas">
+        <div className={styles.ctas}>
           <Link href="https://rupertfund.square.site/">DONATE NOW!</Link>
         </div>
         <ul>
