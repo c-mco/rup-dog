@@ -3,7 +3,7 @@ import Image from "next/image";
 import sadruImage from "./sadbirthdaydog.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarPlus, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -30,12 +30,11 @@ export default function Home() {
           or be...a sad dog pun. 🐶
         </p>
         <div className="button-container">
-
           <a
             href="https://rupertfund.square.site/"
             target="_blank"
             rel="noopener noreferrer"
-            className="donate-button"
+            className="button primary"
           >
             Donate & Buy Merch
           </a>
@@ -48,30 +47,31 @@ export default function Home() {
           <p>
             🕓 <strong>Time:</strong> 4:00 PM till late
           </p>
-          <p>
-            📍 <strong>Venue:</strong>{" "}
-            <a
-              href="https://www.google.com/maps?q=Foreigner+Brewing+Company,+12/102+Henkel+Street,+Brunswick,+VIC+3056"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="venue-link"
-            >
-              Foreigner Brewing Company
-            </a>
-          </p>
-          <div className="calendar-options">
+            <div className="button-container">
+              <a
+                href="https://www.google.com/maps?q=Foreigner+Brewing+Company,+12/102+Henkel+Street,+Brunswick,+VIC+3056"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button secondary"
+              >
+                <FontAwesomeIcon icon={faLocationDot} />Foreigner Brewing Company
+              </a>
+            </div>
+          <div className="button-container">
             <a
               href="/rupert-birthday-event.ics"
               download="Rupert-Birthday-Fundraiser.ics"
-              className="calendar-link"
+              className="button secondary"
             >
               <FontAwesomeIcon icon={faCalendarPlus} /> Add to Calendar (.ics)
             </a>
+          </div>
+          <div className="button-container">
             <a
               href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rupert%E2%80%99s+8th+Birthday+%26+Fundraiser&dates=20241207T060000Z/20241207T140000Z&details=Join+us+to+celebrate+Rupert%21+Help+raise+funds+for+his+vet+bills+while+having+fun+with+exclusive+merch%2C+brews%2C+and+surprises.&location=Foreigner+Brewing+Company,+12/102+Henkel+Street,+Brunswick,+VIC+3056"
               target="_blank"
               rel="noopener noreferrer"
-              className="calendar-link"
+              className="button secondary"
             >
               <FontAwesomeIcon icon={faGoogle} /> Add to Google Calendar
             </a>
@@ -105,6 +105,6 @@ export default function Home() {
           </a>
         </div>
       </footer>
-    </div>
+    </div >
   );
 }
