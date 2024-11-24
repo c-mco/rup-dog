@@ -1,89 +1,140 @@
 /* globals.css */
+@import "@fortawesome/fontawesome-svg-core/styles.css";
 
+:root {
+  --background-color: #b85db5;
+  --accent-color: #f4338f;
+  --text-color: #ffffff;
+  --secondary-text-color: #fefae0;
+  --footer-bg-color: #f4338f;
+  --footer-text-hover-color: #b85db5;
+}
+
+html,
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #fefae0;
-    color: #222;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-  }
-  
-  .main-content {
-    padding: 1rem;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .main-content p {
-    margin: 1.5rem 0;
-  }
-  
-  .imageContainer {
-    position: fixed;
-    right: 0;
-    bottom: 6rem; /* Keeps above footer */
-    width: 450px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  footer {
-    background-color: #e07a5f;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 0.5rem;
-    display: inline-block;
-    transition: color 0.3s;
-  }
-  
-  .footer a:hover {
-    color: #fefae0;
-  }
-  
-  .socials {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .socials a {
-    display: flex;
-    align-items: center;
-    margin: 0.5rem;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .socials a:hover {
-    color: #fefae0;
-  }
-  
-  .socials svg {
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
-  }
-  
-  
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto 50px; /* Main Content, Image, Footer */
+  grid-template-columns: 1fr; /* Single-column layout */
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh; /* Ensures full viewport height */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.page-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-shadow: 2px 2px var(--footer-bg-color);
+  margin-bottom: 1rem;
+}
+
+.main-content {
+  grid-row: 1; /* Place in the second row */
+  grid-column: 1; /* Occupy the first column */
+  justify-self: center; /* Center-align content horizontally */
+  max-width: 500px;
+  text-align: center;
+}
+
+.main-content p {
+  padding: 0rem;
+  margin: 0.5rem;
+  color: var(--secondary-text-color);
+}
+
+.donate-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.donate-button:hover {
+  background-color: var(--footer-text-hover-color);
+  transform: scale(1.05);
+}
+
+.imageContainer {
+  display: flex;
+  grid-row: 2; /* Place in the row above the footer */
+  grid-column: 1; /* Align with the main content column */
+  justify-self: end; /* Align the image to the far right */
+  align-self: flex-end; /* Center it vertically within its row */
+  max-width: 300px;
+}
+.imageContainer img {
+  align-self: flex-end;
+}
+
+footer {
+  grid-row: 3; /* Place in the last row */
+  grid-column: 1; /* Full-width footer */
+  width: 100%; /* Ensure full-width */
+  background-color: var(--footer-bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+.footer a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline;
+  transition: color 0.3s;
+  margin: 0;
+}
+
+.footer a:hover {
+  color: var(--footer-text-hover-color);
+
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.socials svg {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.socials a:hover {
+  color: var(--footer-text-hover-color);
+}
+
