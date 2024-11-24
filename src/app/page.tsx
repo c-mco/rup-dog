@@ -29,14 +29,17 @@ export default function Home() {
           Don&apos;t miss the chance to support the best boy in town. Be there
           or be...a sad dog pun. 🐶
         </p>
-        <a
-          href="https://rupertfund.square.site/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="donate-button"
-        >
-          Donate & Buy Merch
-        </a>
+        <div className="button-container">
+
+          <a
+            href="https://rupertfund.square.site/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="donate-button"
+          >
+            Donate & Buy Merch
+          </a>
+        </div>
         <div className="event-details">
           <h2>Event Details</h2>
           <p>

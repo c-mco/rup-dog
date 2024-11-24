@@ -2,10 +2,11 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
+import Background from "./background"; // Import your SVG component
 
 export const metadata: Metadata = {
   title: "Rupert's 8th Birthday",
-  description: "Ruport's 8th birthday and fundraiser at Foreigner Brewery",
+  description: "Rupert's 8th birthday and fundraiser at Foreigner Brewery",
 };
 
 export default function RootLayout({
@@ -15,7 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="background-container">
+          <Background />
+        </div>
+        <div className="content">{children}</div>
+      </body>
     </html>
   );
 }
