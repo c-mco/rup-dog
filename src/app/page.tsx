@@ -4,12 +4,13 @@ import "./globals.css";
 import Image from "next/image";
 import sadruImage from "./sadru.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
     <div className="container">
       <div className="main-content">
+        <h1 className="page-heading">Rupert’s 8th Birthday & Fundraiser 🎉</h1>
         <p>
           🎉 It&apos;s a PAW-ty! Join us at <strong>Foreigner Brewery</strong>{" "}
           in Brunswick to celebrate the amazing Rupert turning{" "}
@@ -17,7 +18,7 @@ export default function Home() {
         </p>
         <p>
           🐾 Our big boy recently had surgery (goodbye, tail tumor, 👋), and the
-          vet bills were no joke. But don&apos;t worry—Rupert&apos;s still
+          vet bills were no joke. But don&apos;t worry - Rupert&apos;s still
           wagging what he&apos;s got left!
         </p>
         <p>
@@ -29,14 +30,22 @@ export default function Home() {
           Don&apos;t miss the chance to support the best boy in town. Be there
           or be...a sad dog pun. 🐶
         </p>
+        <a
+          href="https://rupertfund.square.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="donate-button"
+        >
+          Donate & Buy Merch
+        </a>
       </div>
       <div className="imageContainer">
         <Image
           src={sadruImage}
           alt="Sadru the Dog"
-          layout="responsive"
           width={500}
           height={500}
+          style={{ maxWidth: "100%", height: "auto" }} // Ensure responsiveness
         />
       </div>
       <footer className="footer">
@@ -54,13 +63,6 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faInstagram} /> @foreignerbrewing
-          </a>
-          <a
-            href="https://www.facebook.com/foreignerbrewery"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faFacebook} /> @foreignerbrewing
           </a>
         </div>
       </footer>
