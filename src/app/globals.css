@@ -2,12 +2,14 @@
 @import "@fortawesome/fontawesome-svg-core/styles.css";
 
 :root {
-  --background-color: #b85db5;
+  --background-color: #724BE1;
+  --background-accent-color: #b85db5;
   --accent-color: #f4338f;
   --text-color: #ffffff;
   --secondary-text-color: #fefae0;
   --footer-bg-color: #f4338f;
   --footer-text-hover-color: #b85db5;
+  
 }
 
 html,
@@ -216,4 +218,10 @@ footer {
     grid-column: 1 / 3; /* Span both columns */
   }
   
+}
+@media (min-width: 1350px) {
+  .container {
+    grid-template-rows: auto 50px; /* Main Content, Footer */
+    grid-template-columns: 1fr 2fr; /* Two-column layout */
+  }
 }
