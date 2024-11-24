@@ -2,7 +2,8 @@ import "./globals.css";
 import Image from "next/image";
 import sadruImage from "./sadbirthdaydog.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -55,6 +56,23 @@ export default function Home() {
               Foreigner Brewing Company
             </a>
           </p>
+          <div className="calendar-options">
+            <a
+              href="/rupert-birthday-event.ics"
+              download="Rupert-Birthday-Fundraiser.ics"
+              className="calendar-link"
+            >
+              <FontAwesomeIcon icon={faCalendarPlus} /> Add to Calendar (.ics)
+            </a>
+            <a
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rupert%E2%80%99s+8th+Birthday+%26+Fundraiser&dates=20241207T060000Z/20241207T140000Z&details=Join+us+to+celebrate+Rupert%21+Help+raise+funds+for+his+vet+bills+while+having+fun+with+exclusive+merch%2C+brews%2C+and+surprises.&location=Foreigner+Brewing+Company,+12/102+Henkel+Street,+Brunswick,+VIC+3056"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="calendar-link"
+            >
+              <FontAwesomeIcon icon={faGoogle} /> Add to Google Calendar
+            </a>
+          </div>
         </div>
       </div>
       <div className="imageContainer">
@@ -85,6 +103,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-
   );
 }

@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Rupert’s 8th Birthday & Fundraiser\nDate and Time - Dec 7\, 2024 4:00 PM to 11:00 PM\nVenue - Foreigner Brewing Company\, 12/102 Henkel Street\, Brunswick\, VIC 3056\nJoin us to celebrate Rupert! Help raise funds for his vet bills while having fun with exclusive merch\, brews\, and surprises.\n
+DTSTART:20241207T050000Z
+DTEND:20241207T120000Z
+LOCATION:Foreigner Brewing Company, 12/102 Henkel Street, Brunswick, VIC 3056
+SUMMARY;LANGUAGE=en-us:Rupert’s 8th Birthday & Fundraiser
+END:VEVENT
+END:VCALENDAR
