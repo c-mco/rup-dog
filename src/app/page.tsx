@@ -1,5 +1,3 @@
-/* page.tsx */
-
 import "./globals.css";
 import Image from "next/image";
 import sadruImage from "./sadru.png";
@@ -38,13 +36,33 @@ export default function Home() {
         >
           Donate & Buy Merch
         </a>
+        <div className="event-details">
+          <h2>Event Details</h2>
+          <p>
+            📅 <strong>Date:</strong> Saturday, 7th December
+          </p>
+          <p>
+            🕓 <strong>Time:</strong> 4:00 PM till late
+          </p>
+          <p>
+            📍 <strong>Venue:</strong>{" "}
+            <a
+              href="https://www.google.com/maps?q=Foreigner+Brewing+Company,+12/102+Henkel+Street,+Brunswick,+VIC+3056"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="venue-link"
+            >
+              Foreigner Brewing Company
+            </a>
+          </p>
+        </div>
       </div>
       <div className="imageContainer">
         <Image
           src={sadruImage}
           alt="Sadru the Dog"
-          width={500}
-          height={500}
+          width={1945}
+          height={1768}
           style={{ maxWidth: "100%", height: "auto" }} // Ensure responsiveness
         />
       </div>

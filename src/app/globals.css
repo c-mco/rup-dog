@@ -71,8 +71,54 @@ body {
 }
 
 .donate-button:hover {
-  background-color: var(--footer-text-hover-color);
-  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.event-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 0px;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker translucent background */
+  color: var(--secondary-text-color); /* Use the lighter text color */
+  text-align: left;
+  font-size: 1rem;
+}
+
+.event-details h2 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--text-color); /* Use primary text color */
+}
+
+.event-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.event-details strong {
+  color: var(--text-color); /* Use the main text color for better contrast */
+  font-weight: bold;
+}
+
+.venue-link {
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.venue-link:hover {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .imageContainer {
@@ -83,6 +129,7 @@ body {
   align-self: flex-end; /* Center it vertically within its row */
   max-width: 300px;
 }
+
 .imageContainer img {
   align-self: flex-end;
 }
@@ -113,6 +160,8 @@ footer {
 
 }
 
+
+
 .socials {
   display: flex;
   flex-wrap: wrap;
@@ -138,3 +187,33 @@ footer {
   color: var(--footer-text-hover-color);
 }
 
+@media (min-width: 1000px) {
+  .container {
+    grid-template-rows: auto 50px; /* Main Content, Footer */
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+  }
+
+  .main-content {
+    grid-row: 1; /* Place in the first row */
+    grid-column: 1 / 2; /* Span both columns */
+    justify-self: center; /* Align content to the left */
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .imageContainer {
+    grid-row: 1; /* Place in the first row */
+    grid-column: 2; /* Align with the second column */
+    justify-self: end; /* Align the image to the far right */
+    max-width: 1000px;
+  }
+
+  .imageContainer img {
+    max-width: 100%;
+  }
+  footer {
+    grid-row: 2; /* Place in the last row */
+    grid-column: 1 / 3; /* Span both columns */
+  }
+  
+}
