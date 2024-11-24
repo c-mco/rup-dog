@@ -3,8 +3,7 @@
 
 :root {
   --background-color: #724BE1;
-  --background-accent-color: #b85db5;
-  --accent-color: #f4338f;
+  --accent-color: #D6008D;
   --text-color: #ffffff;
   --secondary-text-color: #fefae0;
   --footer-bg-color: #f4338f;
@@ -21,7 +20,6 @@ body {
   line-height: 1.6;
   background-color: var(--background-color);
   color: var(--text-color);
-
   min-height: 100vh;
 }
 

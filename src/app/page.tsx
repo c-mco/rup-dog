@@ -1,6 +1,6 @@
 import "./globals.css";
 import Image from "next/image";
-import sadruImage from "./sadru.png";
+import sadruImage from "./sadbirthdaydog.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
@@ -60,7 +60,7 @@ export default function Home() {
       <div className="imageContainer">
         <Image
           src={sadruImage}
-          alt="Sadru the Dog"
+          alt="Rupert the dog with a party hat looking a bit sorry for himself"
           width={1945}
           height={1768}
           style={{ maxWidth: "100%", height: "auto" }} // Ensure responsiveness
@@ -85,5 +85,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+
   );
 }
