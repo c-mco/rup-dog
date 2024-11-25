@@ -206,17 +206,27 @@ footer {
   align-items: center;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.8rem;
   transition: color 0.3s;
 }
 
 .socials svg {
-  margin-right: 0.5rem;
-  font-size: 1.5rem;
+  margin-right: 0.3rem;
+  font-size: 1.0rem;
 }
 
 .socials a:hover {
   color: var(--footer-text-hover-color);
+}
+
+@media (min-width: 350px) {
+  .socials a {
+    font-size: 1rem;
+  }
+  .socials svg {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+  }
 }
 
 

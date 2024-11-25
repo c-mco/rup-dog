@@ -94,7 +94,8 @@ export default function Home() {
           alt="Rupert the dog with a party hat looking a bit sorry for himself"
           width={1945}
           height={1768}
-          style={{ maxWidth: "100%", height: "auto" }} // Ensure responsiveness
+          layout="responsive"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <footer className="footer">
