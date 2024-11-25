@@ -267,4 +267,8 @@ footer {
     grid-template-rows: auto 50px;
     grid-template-columns: 1fr 2fr;
   }
+  
+  .main-content {
+    margin-left: 5rem;
+  }
 }

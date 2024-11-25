@@ -2,7 +2,7 @@ import "./globals.css";
 import Image from "next/image";
 import sadruImage from "./sadbirthdaydog.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faCalendarPlus, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
@@ -74,6 +74,16 @@ export default function Home() {
               className="button secondary"
             >
               <FontAwesomeIcon icon={faGoogle} /> Add to Google Calendar
+            </a>
+          </div>
+          <div className="button-container">
+            <a
+              href="https://www.facebook.com/events/551922977445582"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button secondary"
+            >
+              <FontAwesomeIcon icon={faFacebook} /> Join the Facebook Event!
             </a>
           </div>
         </div>
